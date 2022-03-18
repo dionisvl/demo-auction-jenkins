@@ -42,3 +42,7 @@ pipeline {
   }
 }
 ```
+
+## Список переменных дженкинса 
+- https://wiki.jenkins.io/display/JENKINS/Building+a+software+project
+- мы будем использовать BUILD_NUMBER
