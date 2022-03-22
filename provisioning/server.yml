@@ -5,7 +5,8 @@
     roles:
         - swap
         - docker
-        - docker-compose-arm
+        #- docker-compose-arm
+        - docker-compose-default
         -   role: docker-cache
             vars:
                 config_path: /etc/docker/dind-daemon.json
@@ -18,7 +19,7 @@
     roles:
         - swap
         - docker
-        - docker-compose-common
+        - docker-compose-default
         - docker-cache
         - java
         - agent

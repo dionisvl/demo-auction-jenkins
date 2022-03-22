@@ -15,7 +15,7 @@ services:
 
     jenkins:
         # Опционально! (нужно удалить если у вас x86)
-        platform: linux/arm64
+#        platform: linux/arm64
         build:
             context: ./docker/common/jenkins
         environment:
