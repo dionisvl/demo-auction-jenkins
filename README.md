@@ -1,12 +1,13 @@
 # Установка Jenkins с Docker
-## Installation to dev
+
+## How to install to local dev
 - run commad `make init`
 - see working URL:
     - Jenkins - http://localhost:8000/
 - for show initial password:
     - `make show-initial-password`
 
-## Installation to production
+## How to install to production
 - go to provision directory and prepare target servers
   - `cd pro*`
   - `make server`
@@ -20,7 +21,7 @@
 - For show Jenkins initial password:  
   - `cd pro*`
   - `make show-initial-password`
-
+- After register your admin user, don't forget to write login-password to somewhere place for future!
 
 ### Создание Jenkins агентов
 - Сгенерировать ключ для дженкинс агента  
