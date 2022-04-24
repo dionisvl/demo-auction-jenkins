@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:jdk11
+FROM jenkins/jenkins:2.340-jdk11
 
 USER root
 
@@ -14,11 +14,11 @@ RUN echo "deb [arch=$(dpkg --print-architecture) \
 
 RUN apt-get update && apt-get install -y docker-ce-cli
 
-RUN apt-get install -y make gettext
-
 RUN apt-get install -y python3-pip \
 	&& pip3 install docker-compose
 
+RUN apt-get install -y gcc cargo make gettext
+
 USER jenkins
 
-RUN jenkins-plugin-cli --plugins "blueocean:1.25.3 docker-workflow:1.28"
+RUN jenkins-plugin-cli --plugins "blueocean:1.25.3 docker-workflow:1.28 ssh-agent:1.24.1 periodicbackup:1.8 thinBackup:1.10"

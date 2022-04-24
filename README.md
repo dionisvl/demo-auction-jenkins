@@ -15,13 +15,23 @@
   - `make generate-agent-key`
   - `make authorize-agents`
 - in project directory run deploy to production server by example command:
-    - `HOST=164.215.102.205 PORT=22 make deploy`
+    - `HOST=147.78.67.252 PORT=2222 make deploy`
 - Go to production URL:
   - http://jenkins.demo-auction.phpqa.ru
 - For show Jenkins initial password:  
   - `cd pro*`
   - `make show-initial-password`
 - After register your admin user, don't forget to write login-password to somewhere place for future!
+- For restore settings from backup file use plugin ThinBackup:
+  - https://plugins.jenkins.io/thinBackup/
+  - go to http://jenkins.demo-auction.phpqa.ru/thinBackup/
+  - in settings set Backup directory to /var/jenkins_home (printenv JENKINS_HOME)
+  - move backup file to /var/lib/docker/volumes/jenkins_jenkins-data/_data
+  - now you can press button `Restore`
+- or https://plugins.jenkins.io/periodicbackup/
+- Add multibranch pipeline with GitHub repository, there: https://jenkins.demo-auction.phpqa.ru/view/all/newJob
+- Fill all credential there: http://jenkins.demo-auction.phpqa.ru/credentials/
+- install Jenkins plugin "SSH Agent"
 
 ### Создание Jenkins агентов
 - Сгенерировать ключ для дженкинс агента  
